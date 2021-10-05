@@ -34,10 +34,10 @@ def main():
 		if ext == 'csv':
 			splitcsv(f)
 
+
 end_timer = ti.time()
 
 print(f'elapsed {end_timer - start_timer} seconds')
-
 
 if __name__ == '__main__':
 	main()
