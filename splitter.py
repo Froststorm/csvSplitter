@@ -11,7 +11,7 @@ for f in files_list:
 
 print(f"CSV files in current directory: {' '.join(files_csv)}")
 
-start = ti.time()
+start_timer = ti.time()
 files = os.listdir()
 
 
@@ -28,11 +28,16 @@ def splitcsv(file):
 	print(f"Files added to directory: {' '.join(files_csv_out)}")
 
 
-for f in files_list:
-	ext = f.split('.')[-1]
-	if ext == 'csv':
-		splitcsv(f)
+def main():
+	for f in files_list:
+		ext = f.split('.')[-1]
+		if ext == 'csv':
+			splitcsv(f)
 
-stop = ti.time()
+end_timer = ti.time()
 
-print(f'elapsed {stop - start} seconds')
+print(f'elapsed {end_timer - start_timer} seconds')
+
+
+if __name__ == '__main__':
+	main()
